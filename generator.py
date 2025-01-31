@@ -14,23 +14,23 @@ def generate_password(length, include_uppercase, include_numbers, include_specia
     Returns:
         The generated password in string 
     """
-    # Define the possible characters for the password
+    # Possible characters for the password
     lowercase = string.ascii_lowercase 
     uppercase = '' 
     numbers = ''  
     special = ''  
 
-    # Add uppercase letters if the user wants them
+    # Uppercase letters if the user picks them
     if include_uppercase:
         uppercase = string.ascii_uppercase
-    # Add numbers if the user wants them
+    # Add numbers if the user picks them
     if include_numbers:
         numbers = string.digits
-    # Add special characters if the user wants them
+    # Add special characters if the user picks them
     if include_special:
         special = string.punctuation
 
-    # Combine all selected character types
+    # Combine selected character types
     all_characters = lowercase + uppercase + numbers + special
 
     # Check if the user selected at least one character type
@@ -39,7 +39,8 @@ def generate_password(length, include_uppercase, include_numbers, include_specia
 
     # An empty list
     password_characters = []
-    # Use loop to pick random characters and add to list
+    
+    # Use a loop to pick random characters and add them to the list
     for _ in range(length):
         random_character = random.choice(all_characters)
         password_characters.append(random_character)
