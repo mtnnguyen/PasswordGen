@@ -14,6 +14,7 @@ def generate_password(length, include_uppercase, include_numbers, include_specia
     Returns:
         The generated password in string 
     """
+    
     # Possible characters for the password
     lowercase = string.ascii_lowercase 
     uppercase = '' 
@@ -47,7 +48,6 @@ def generate_password(length, include_uppercase, include_numbers, include_specia
     # Joins list of characters into a single string 
     password = ''.join(password_characters)
     return password
-
 
 def main():
     print("Welcome to the Password Generator!")
